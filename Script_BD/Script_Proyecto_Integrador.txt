@@ -1,0 +1,13 @@
+CREATE TABLE `estudiantes` (
+ `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+ `nombre` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `documento_identidad` int(11) NOT NULL,
+ `genero` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `curso` int(11) NOT NULL,
+ `estado` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+ `edad` int(11) NOT NULL,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ UNIQUE KEY `documento_identidad` (`documento_identidad`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
